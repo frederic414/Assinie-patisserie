@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+// Route Fred
 Route::get('/', [ClientController::class, 'home']);
 Route::get('/catalogue', [ClientController::class, 'catalogue']);
 Route::get('/panier', [ClientController::class, 'panier']);
