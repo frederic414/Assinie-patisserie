@@ -3,6 +3,7 @@
 @section('title')
     Commandes
 @endsection
+{!!Form::hidden('', $increment =1)!!}
 
 @section('contenu')
 
@@ -16,24 +17,37 @@
                   <thead>
                     <tr>
                         <th>Ordre</th>
+                        <th>Date</th>
                         <th>Nom du clients</th>
                         <th>Adresse</th>
-                        <th>Panier</th>
-                        <th>Paiyement Id</th>
+                        <th>telephone</th>
+                        <th>Date livraison</th>
+                        <th>Panier</th>  
                         <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>2012/08/03</td>
-                        <td>2012/08/03</td>
-                        <td>2012/08/03</td>
-                        <td>2012/08/03</td>
+
+                    @foreach ($commandes as $commande)
+                      <tr>
+                        <td>{{$increment}}</td>
+                        <td>{{$commande->created_at}}</td>
+                        <td>{{$commande->fullname}}</td>
+                        <td>{{$commande->adresse}}</td>
+                        <td>{{$commande->telephone}}</td>
+                        <td>{{$commande->date}}</td>
                         <td>
-                          <button class="btn btn-outline-primary">View</button>
+                          @foreach ($commande->panier->items as $item)
+                              {{$item['product_name']. ' , '}}
+                          @endforeach
                         </td>
-                    </tr>
+                        
+                        <td>
+                          <a href="{{url('/commande_pdf/'.$commande->id)}}"><button class="btn btn-outline-primary">View</button></a>
+                        </td>
+                      </tr>
+                      {!!Form::hidden('', $increment++)!!}
+                    @endforeach
                   </tbody>
                 </table>
               </div>

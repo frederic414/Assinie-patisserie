@@ -27,9 +27,8 @@
 							  <th>Total</th>
 							</tr>
 						  </thead>
-						  @if (Session::has('cart'))
-								<tbody>
-
+						  <tbody>
+						  		@if (Session::has('cart'))
 									@foreach ($produits as $produit)
 										<tr class="text-center">
 											<td class="product-remove"><a href="{{URL::to('/retirer-produit/'.$produit['product_id'])}}"><span class="ion-ios-close"></span></a></td>
@@ -54,9 +53,15 @@
 											
 											<td class="total">${{$produit['product_price']*$produit['qty']}}</td>
 										</tr>
-									@endforeach
+									@endforeach	
+									@else
+										@if (Session::has('status'))
+											<div class="alert alert-success" role="alert">
+												{{Session::get('status')}}
+											</div>
+										@endif
+									@endif
 								</tbody>
-						  @endif
 						</table>
 					</div>
 			  </div>

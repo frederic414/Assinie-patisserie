@@ -17,7 +17,8 @@
 	<div class="container">
 	  <div class="row justify-content-center">
 		<div class="col-xl-7 ftco-animate">
-			  <form action="#" class="billing-form">
+			  <form action="{{url('/confirmation')}}" method="POST" class="billing-form">
+				{{ csrf_field() }}
 				  <h3 class="mb-4 billing-heading">Details de la commande</h3>
 				  <div class="row align-items-end">
 					  <div class="col-md-12">
@@ -28,26 +29,21 @@
 					  </div>
 					  <div class="col-md-12">
 						  <div class="form-group">
-							  <label for="lastname">Addresse de Livraison</label>
-						  <input type="text" class="form-control"  name="address">
+								<label for="lastname">Addresse de Livraison</label>
+								<input type="text" class="form-control"  name="adresse">
 						  </div>
 					  </div>
 					  <div class="col-md-12">
 						  <div class="form-group">
 							  <label for="lastname">Numero de telephone</label>
-						  <input type="text" class="form-control" id="card-name" name="card_name">
+						  <input type="text" class="form-control" id="card-name" name="telephone">
 						  </div>
 					  </div>
-					  <div class="col-md-12">
-						<div class="form-group">
-							<label for="lastname">Numero Whatsapp</label>
-						<input type="text" class="form-control" id="card-name" name="card_name">
-						</div>
-					</div>
+					  
 					  <div class="col-md-12">
 						  <div class="form-group">
 							  <label for="lastname">Date de Livraison</label>
-						  <input type="date" class="form-control" id="card-number">
+						  <input type="datetime-local" class="form-control" name="date" id="card-number">
 						  </div>
 					  </div>
 					  <div class="col-md-12">

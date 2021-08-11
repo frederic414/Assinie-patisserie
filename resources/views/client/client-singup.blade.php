@@ -32,22 +32,32 @@
 	<div class="limiter">
 		 <div class="container-login100" style="background-image: url('frontend/images/bg-01.jpg');">
 			<div class="wrap-login100">
-				<form action="{{url('/acceder_compte')}}" method="POST" class="login100-form validate-form">
+				<form action="{{url('/creer_compte')}}" method="POST" class="login100-form validate-form">
+					{{ csrf_field() }}
 					<a href="{{URL::to('/')}}">
-						{{ csrf_field() }}
 						<span class="login100-form-logo">
 							<i class="zmdi zmdi-landscape"></i>
 						</span>
 					</a>
 
 					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
+						S'enregistrer
 					</span>
 
-					@if (Session::has('status'))
+					@if (count($errors) > 0)
 						<div class="alert alert-danger" role="alert">
-							{{Session::get('status')}} 
-						</div>
+							<ul>
+								@foreach ($errors->all() as $error)
+								<li>{{$error}}</li>									
+								@endforeach
+							</ul>
+						</div>		
+					@endif
+
+					@if (Session::has('status'))
+						<div class="alert alert-success" role="alert">
+							{{Session::get('status')}}
+						</div>						
 					@endif
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
@@ -74,8 +84,8 @@
 					</div>
 
 					<div class="text-center p-t-90">
-						<a class="txt1" href="{{url('/client-singup')}}">
-							Avez-vous un compte ? 	S'enregistré
+						<a class="txt1" href="{{url('/client-login')}}">
+							Avez-vous un compte ?   connectez vous
 						</a>
 					</div>
 				</form>
