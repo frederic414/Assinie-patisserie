@@ -36,7 +36,7 @@
 								<h3><a href="#">{{$produit->product_name}}</a></h3>
 								<div class="d-flex">
 									<div class="pricing">
-										<p class="price"><span>${{$produit->product_price}}</span></p>
+										<p class="price"><span>Fcfa{{$produit->product_price}}</span></p>
 									</div>
 								</div>
 								<div class="bottom-area d-flex px-3">
@@ -64,9 +64,6 @@
 			  <li><a href="#">&lt;</a></li>
 			  <li class="active"><span>1</span></li>
 			  <li><a href="#">2</a></li>
-			  <li><a href="#">3</a></li>
-			  <li><a href="#">4</a></li>
-			  <li><a href="#">5</a></li>
 			  <li><a href="#">&gt;</a></li>
 			</ul>
 		  </div>

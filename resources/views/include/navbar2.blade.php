@@ -18,7 +18,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/ajoutercategorie')}}">Ajouter catégorie</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('ajouterproduit')}}">Ajouter Produit</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{URL::to('/ajouterslider')}}">Ajouter un slider</a></li>
-                <li class="nav-item"><a class="nav-link" href="wizard.html">Ajouter un challenge</a></li>
+                {{-- <li class="nav-item"><a class="nav-link" href="#">Ajouter un challenge</a></li> --}}
               </ul>
             </div>
           </li>

@@ -40,7 +40,7 @@
 												<p></p>
 											</td>
 											
-											<td class="price">${{$produit['product_price']}}</td>
+											<td class="price">Fcfa{{$produit['product_price']}}</td>
 											<form action="{{URL::to('/modifier-qty/'.$produit['product_id'])}}" method="POST">
 												{{ csrf_field() }}
 												<td class="quantity">
@@ -51,7 +51,7 @@
 												</td>
 											</form>
 											
-											<td class="total">${{$produit['product_price']*$produit['qty']}}</td>
+											<td class="total">Fcfa{{$produit['product_price']*$produit['qty']}}</td>
 										</tr>
 									@endforeach	
 									@else

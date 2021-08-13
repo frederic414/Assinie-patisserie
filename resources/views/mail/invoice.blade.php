@@ -187,7 +187,7 @@
                                 <td>{{$item['qty']}}</td>
                                 <td>{{$item['product_price']}}</td>
                                 <td>
-                                    ${{$item['product_price']*$item['qty']}}
+                                    Fcfa {{$item['product_price']*$item['qty']}}
                                 </td>
                             </tr> 
                         @endforeach
@@ -196,7 +196,7 @@
                             <td></td>
                             <td></td>
                             <td>
-                               Total: ${{$commande->panier->totalPrice}}
+                               Total: Fcfa {{$commande->panier->totalPrice}}
                             </td>
                         </tr>    
                     @endforeach               
