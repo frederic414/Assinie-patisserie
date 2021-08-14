@@ -19,7 +19,7 @@ class CategorieController extends Controller
         $categories->category_name = $request->input('Category_name');
         $categories->save();
 
-        return redirect('/ajoutercategorie')->with('status', 'La categorie ' .$categories->category_name. ' a été ajouter avec succès' );
+        return redirect('/admin/ajoutercategorie')->with('status', 'La categorie ' .$categories->category_name. ' a été ajouter avec succès' );
     }
 
     public function categories()
@@ -44,7 +44,7 @@ class CategorieController extends Controller
         $categories->category_name = $request->input('Category_name');
         $categories->update();
 
-        return redirect('/categories')->with('status', 'La categorie ' .$categories->category_name. ' a été modifiée avec succès' );
+        return redirect('/admin/categories')->with('status', 'La categorie ' .$categories->category_name. ' a été modifiée avec succès' );
   
     }
 
@@ -54,7 +54,7 @@ class CategorieController extends Controller
 
         $categories->delete();
 
-        return redirect('/categories')->with('status', 'La categorie ' .$categories->category_name. ' a été supprimée avec succès' );
+        return redirect('/admin/categories')->with('status', 'La categorie ' .$categories->category_name. ' a été supprimée avec succès' );
 
 
     }

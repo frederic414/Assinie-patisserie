@@ -44,6 +44,6 @@
 @endsection
 
 @section('scripts')
-    <script src="js/form-validation.js"></script>
-    <script src="js/bt-maxLength.js"></script>
+    <script src="/js/form-validation.js"></script>
+    <script src="/js/bt-maxLength.js"></script>
 @endsection

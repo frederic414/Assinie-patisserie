@@ -246,5 +246,5 @@
 @endsection
 
 @section('scripts')
-  <script src="backend/js/dashboard.js"></script>
+  <script src="/backend/js/dashboard.js"></script>
 @endsection

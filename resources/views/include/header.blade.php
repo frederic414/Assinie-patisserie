@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
+	@livewireStyles
   </head>
   <body class="goto-here">
 		<div class="py-1 " style="background-color : #dfce32d8" >

@@ -48,12 +48,12 @@
                           @endif
                         </td>
                         <td>
-                          <button class="btn btn-outline-primary" onclick="window.location = '{{url('/edit_produit/'.$produit->id)}}'">E</button>
-                          <button class="btn btn-outline-danger"><a href="{{url('/supprimerproduit/'.$produit->id)}}" id="delete">S</a></button>
+                          <button class="btn btn-outline-primary" onclick="window.location = '{{url('/admin/edit_produit/'.$produit->id)}}'">E</button>
+                          <button class="btn btn-outline-danger"><a href="{{url('/admin/supprimerproduit/'.$produit->id)}}" id="delete">S</a></button>
                           @if ($produit->status==1)
-                            <button class="btn btn-outline-warning" onclick="window.location = '{{url('/desactiver_produit/'.$produit->id)}}'">D</button>
+                            <button class="btn btn-outline-warning" onclick="window.location = '{{url('/admin/desactiver_produit/'.$produit->id)}}'">D</button>
                           @else
-                              <button class="btn btn-outline-success" onclick="window.location = '{{url('/activer_produit/'.$produit->id)}}'">A</button>
+                              <button class="btn btn-outline-success" onclick="window.location = '{{url('/admin/activer_produit/'.$produit->id)}}'">A</button>
                           @endif
                         </td>
                     </tr>
@@ -69,5 +69,5 @@
 @endsection
 
 @section('scripts')
-    <script src="backend/js/data-table.js"></script>
+    <script src="/backend/js/data-table.js"></script>
 @endsection

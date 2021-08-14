@@ -44,8 +44,8 @@
                       <td>{{$increment}}</td>
                       <td>{{$categorie->category_name}}</td>
                       <td>
-                        <button class="btn btn-outline-primary" onclick="window.location = '{{url('/edit_categorie/'.$categorie->id)}}'">Editer</button>
-                        <button class="btn btn-outline-danger"><a href="{{url('/supprimercategorie/'.$categorie->id)}}" id="delete">Supprimer</a></button>
+                        <button class="btn btn-outline-primary" onclick="window.location = '{{url('/admin/edit_categorie/'.$categorie->id)}}'">Editer</button>
+                        <button class="btn btn-outline-danger"><a href="{{url('/admin/supprimercategorie/'.$categorie->id)}}" id="delete">Supprimer</a></button>
                       </td>
                     </tr>
                     {!!Form::hidden('', $increment++)!!}
@@ -60,5 +60,5 @@
 @endsection
 
 @section('scripts')
-    <script src="backend/js/data-table.js"></script>
+    <script src="/backend/js/data-table.js"></script>
 @endsection

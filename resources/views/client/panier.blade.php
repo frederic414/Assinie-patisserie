@@ -28,8 +28,13 @@
 							</tr>
 						  </thead>
 						  <tbody>
+							@php
+								$totalPrice =0;
+							@endphp
+							
 						  		@if (Session::has('cart'))
 									@foreach ($produits as $produit)
+															
 										<tr class="text-center">
 											<td class="product-remove"><a href="{{URL::to('/retirer-produit/'.$produit['product_id'])}}"><span class="ion-ios-close"></span></a></td>
 											
@@ -40,7 +45,7 @@
 												<p></p>
 											</td>
 											
-											<td class="price">Fcfa{{$produit['product_price']}}</td>
+											<td class="price">{{$produit['product_price']}} Fcfa</td>
 											<form action="{{URL::to('/modifier-qty/'.$produit['product_id'])}}" method="POST">
 												{{ csrf_field() }}
 												<td class="quantity">
@@ -51,8 +56,12 @@
 												</td>
 											</form>
 											
-											<td class="total">Fcfa{{$produit['product_price']*$produit['qty']}}</td>
+											<td class="total">{{$produit['product_price']*$produit['qty']}} Fcfa</td>
 										</tr>
+										@php
+											$totalPrice += $produit['product_price']*$produit['qty'];
+										@endphp
+										
 									@endforeach	
 									@else
 										@if (Session::has('status'))
@@ -60,12 +69,14 @@
 												{{Session::get('status')}}
 											</div>
 										@endif
-									@endif
+								@endif
 								</tbody>
 						</table>
 					</div>
 			  </div>
 		  </div>
+		  @if (Session::has('cart'))
+
 		  <div class="row justify-content-end">
 			  <div class="col-lg-6 mt-5 cart-wrap ftco-animate">
 				  <div class="cart-total mb-3">
@@ -80,31 +91,35 @@
 				  </div>
 				  <p><a href="checkout.html" class="btn btn-primary py-3 px-4">Apply Coupon</a></p>
 			  </div>
-			  <div class="col-lg-6 mt-5 cart-wrap ftco-animate">
-				  <div class="cart-total mb-3">
-					  <h3>Totals panier</h3>
-					  <p class="d-flex">
-						  <span>Sous Total</span>
-						  <span>$20.60</span>
-					  </p>
-					  <p class="d-flex">
-						  <span>Livraison</span>
-						  <span>$0.00</span>
-					  </p>
-					  <p class="d-flex">
-						  <span>Remise</span>
-						  <span>$3.00</span>
-					  </p>
-					  <hr>
-					  <p class="d-flex total-price">
-						  <span>Total</span>
-						  <span>$17.60</span>
-					  </p>
-				  </div>
+			  
+				<div class="col-lg-6 mt-5 cart-wrap ftco-animate">
+					<div class="cart-total mb-3">
+						<h3>Totals panier</h3>
+						<p class="d-flex">
+							<span>Sous Total</span>
+							<span>{{$totalPrice}} Fcfa</span>
+						</p>
+						<p class="d-flex">
+							<span>Livraison</span>
+							<span>1000 Fcfa</span>
+						</p>
+						<p class="d-flex">
+							<span>Remise</span>
+							<span>0 Fcfa</span>
+						</p>
+						<hr>
+						<p class="d-flex total-price">
+							<span>Total</span>
+							<span>{{$totalPrice + 1000}} Fcfa</span>
+						</p>
+					</div>
+				
 				  <p><a href="{{URL::to('/checkout')}}" class="btn btn-primary py-3 px-4">Valider la commande</a></p>
 			  </div>
+			  
 		  </div>
 		  </div>
+		  @endif
 	  </section>
 
 	  

@@ -44,6 +44,7 @@ class ClientController extends Controller
 
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
+ 
 
         return view('client.panier', ['produits' => $cart->items]);
     }

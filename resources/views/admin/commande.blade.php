@@ -43,7 +43,7 @@
                         </td>
                         
                         <td>
-                          <a href="{{url('/commande_pdf/'.$commande->id)}}"><button class="btn btn-outline-primary">View</button></a>
+                          <a href="{{url('/admin/commande_pdf/'.$commande->id)}}"><button class="btn btn-outline-primary">View</button></a>
                         </td>
                       </tr>
                       {!!Form::hidden('', $increment++)!!}
@@ -59,5 +59,5 @@
 @endsection
 
 @section('scripts')
-    <script src="backend/js/data-table.js"></script>
+    <script src="/backend/js/data-table.js"></script>
 @endsection

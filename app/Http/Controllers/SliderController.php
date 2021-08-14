@@ -47,7 +47,7 @@ class SliderController extends Controller
 
         $slider->save();
 
-        return redirect('/ajouterslider')->with('status', 'Le slider a été inserer avec succès');
+        return redirect('/admin/ajouterslider')->with('status', 'Le slider a été inserer avec succès');
   
 
     }
@@ -102,7 +102,7 @@ class SliderController extends Controller
 
         $slider->update();
 
-        return redirect('/slider')->with('status', 'Le slider a bien été mis à jour');
+        return redirect('/admin/slider')->with('status', 'Le slider a bien été mis à jour');
 
     }
 
@@ -116,7 +116,7 @@ class SliderController extends Controller
         }
         $slider->delete();
 
-        return redirect('/slider')->with('status', 'Le slider a bien été supprimer avec succes');
+        return redirect('/admin/slider')->with('status', 'Le slider a bien été supprimer avec succes');
 
     }
 
@@ -127,7 +127,7 @@ class SliderController extends Controller
         $slider->slider_status = 1;
         $slider->update();
 
-        return redirect('/slider')->with('status', 'Le slider a été activer avec succes');
+        return redirect('/admin/slider')->with('status', 'Le slider a été activer avec succes');
 
     }
 
@@ -138,7 +138,7 @@ class SliderController extends Controller
         $slider->slider_status = 0;
         $slider->update();
 
-        return redirect('/slider')->with('status', 'Le slider a été desactiver avec succes');
+        return redirect('/admin/slider')->with('status', 'Le slider a été desactiver avec succes');
 
     }
 

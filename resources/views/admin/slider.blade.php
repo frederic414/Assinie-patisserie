@@ -44,12 +44,12 @@
                           @endif
                         </td>
                         <td>
-                          <button class="btn btn-outline-primary" onclick="window.location = '{{url('/edit_slider/'.$slider->id)}}'">Editer</button>
-                          <button class="btn btn-outline-danger"><a href="{{url('/supprimerslider/'.$slider->id)}}" id="delete">Supprimer</a></button>
+                          <button class="btn btn-outline-primary" onclick="window.location = '{{url('/admin/edit_slider/'.$slider->id)}}'">Editer</button>
+                          <button class="btn btn-outline-danger"><a href="{{url('/admin/supprimerslider/'.$slider->id)}}" id="delete">Supprimer</a></button>
                           @if ($slider->slider_status==1)
-                            <button class="btn btn-outline-warning" onclick="window.location = '{{url('/desactiver_slider/'.$slider->id)}}'">Desactiver</button>
+                            <button class="btn btn-outline-warning" onclick="window.location = '{{url('/admin/desactiver_slider/'.$slider->id)}}'">Desactiver</button>
                           @else
-                              <button class="btn btn-outline-success" onclick="window.location = '{{url('/activer_slider/'.$slider->id)}}'">Activer</button>
+                              <button class="btn btn-outline-success" onclick="window.location = '{{url('/admin/activer_slider/'.$slider->id)}}'">Activer</button>
                           @endif
                         </td>
                     </tr>
@@ -70,5 +70,5 @@
 @endsection
 
 @section('scripts')
-    <script src="backend/js/data-table.js"></script>
+    <script src="/backend/js/data-table.js"></script>
 @endsection
