@@ -36,24 +36,28 @@
                   @foreach ($produits as $produit)
                       <tr>
                         <td>{{$increment}}</td>
-                        <td><img class="img-fluid" src="/storage/product_images/{{$produit->product_image}}" alt=""></td>
-                        <td>{{$produit->product_name}}</td>
+                        <td>
+                          <a href="{{url('/admin/produits/recommandation/'.$produit->id)}}"> 
+                            <img class="img-fluid" src="/storage/product_images/{{$produit->product_image}}" alt="">
+                          </a>
+                        </td>
+                        <td>{{$produit->product_name}}</td>                       
                         <td>{{$produit->product_category}}</td>
                         <td>{{$produit->product_price}}</td>
                         <td>      
                           @if ($produit->status==1)
-                              <label class="badge badge-success">A+</label>            
+                              <label class="badge badge-success">Activer</label>            
                           @else
-                            <label class="badge badge-danger">D-</label> 
+                            <label class="badge badge-danger">Desactiver</label> 
                           @endif
                         </td>
                         <td>
-                          <button class="btn btn-outline-primary" onclick="window.location = '{{url('/admin/edit_produit/'.$produit->id)}}'">E</button>
-                          <button class="btn btn-outline-danger"><a href="{{url('/admin/supprimerproduit/'.$produit->id)}}" id="delete">S</a></button>
+                          <button class="btn btn-outline-primary" onclick="window.location = '{{url('/admin/edit_produit/'.$produit->id)}}'">Editer</button>
+                          <button class="btn btn-outline-danger"><a href="{{url('/admin/supprimerproduit/'.$produit->id)}}" id="delete">Supprimer</a></button>
                           @if ($produit->status==1)
-                            <button class="btn btn-outline-warning" onclick="window.location = '{{url('/admin/desactiver_produit/'.$produit->id)}}'">D</button>
+                            <button class="btn btn-outline-warning" onclick="window.location = '{{url('/admin/desactiver_produit/'.$produit->id)}}'">Desactiver</button>
                           @else
-                              <button class="btn btn-outline-success" onclick="window.location = '{{url('/admin/activer_produit/'.$produit->id)}}'">A</button>
+                              <button class="btn btn-outline-success" onclick="window.location = '{{url('/admin/activer_produit/'.$produit->id)}}'">Activer</button>
                           @endif
                         </td>
                     </tr>

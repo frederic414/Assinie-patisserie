@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PdfController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\SliderController;
@@ -24,6 +23,7 @@ Auth::routes();
 
 Route::get('/', [ClientController::class, 'home']);
 Route::get('/catalogue', [ClientController::class, 'catalogue']);
+Route::get('/catalogue/produit/{id}', [ClientController::class, 'produit']);
 Route::get('/panier', [ClientController::class, 'panier']);
 Route::get('/checkout', [ClientController::class, 'checkout']);
 Route::get('/client-login', [ClientController::class, 'client_login']);
@@ -53,6 +53,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/ajouterproduit', [ProduitController::class, 'ajouterproduit']);
         Route::post('/sauverproduit', [ProduitController::class, 'sauverproduit']);
         Route::get('/produits', [ProduitController::class, 'produits']);
+        Route::get('/produits/recommandation/{id}', [ProduitController::class, 'recommandation']);
         Route::get('/edit_produit/{id}', [ProduitController::class, 'edit_produit']);
         Route::post('/modifierproduit', [ProduitController::class, 'modifierproduit']);
         Route::get('/supprimerproduit/{id}', [ProduitController::class, 'supprimerproduit']);

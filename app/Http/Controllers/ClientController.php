@@ -36,6 +36,8 @@ class ClientController extends Controller
         return redirect('/catalogue');
     }
 
+    
+
     public function panier()
     {
         if (!Session::has('cart')) {
@@ -83,9 +85,16 @@ class ClientController extends Controller
 
     public function catalogue()
     {
+        
         $categories = Category::get();
-        $produits = Product::where('status', 1)->get();
+        $produits = Product::where('status', 1)->paginate(2);
         return view('client.catalogue')->with('categories', $categories)->with('produits', $produits);
+    }
+
+    public function produit($id)
+    {
+        $produit = Product::where('status', 1)->find($id);
+        return view('client.produit',['produit' => $produit]);
     }
 
     public function checkout()

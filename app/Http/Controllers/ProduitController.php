@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
@@ -27,18 +26,12 @@ class ProduitController extends Controller
 
         if($request->hasFile('product_image'))
         {
-           // $fileNameWithExt = $request->file('product_image')->getClientOriginalName();
-
-           // $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
 
             $extension = $request->file('product_image')->getClientOriginalExtension();
             //nouvelle ligne
             $fileName = $request->product_image->getClientOriginalName();
 
             $fileNameToStore = $fileName.'assinie_'.time().'.'.$extension;
-            
-           // $path = 'Images/' . $fileName;
-           // store::put($path, file_get_contents($request->product_image->getRealPath()));
 
             $path = $request->file('product_image')->storeAs('public/product_images', $fileNameToStore);
         }
@@ -65,6 +58,13 @@ class ProduitController extends Controller
         $produits = Product::get();
 
         return view('admin.produits')->with('produits', $produits);
+    }
+
+    public function recommandation($id)
+    {
+        $produits = Product::get();
+        $produit = Product::find($id);
+        return view('admin.recommandation')->with('produits', $produits)->with('produit', $produit);
     }
 
     public function edit_produit($id)

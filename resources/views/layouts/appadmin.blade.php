@@ -16,7 +16,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="{{asset('backend/css/style.css')}}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="{{asset('backend/images/logo2.png')}}" />
+  <link rel="shortcut icon" href="{{asset('/backend/images/logo2.png')}}" />
 </head>
 <body>
   <div class="container-scroller">
@@ -63,7 +63,7 @@
     $(document).on("click", "#delete", function(e){
       e.preventDefault();
       var link = $(this).attr("href");
-      bootbox.confirm("Voulez vous vraiment supprimé la catégorie", function(confirmed){
+      bootbox.confirm("Voulez vous vraiment supprimé cet element", function(confirmed){
         if(confirmed)
         {
           window.location.href = link;
