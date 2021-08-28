@@ -2,7 +2,6 @@
 
 @section('contenu')
 
-
 <section id="home-section" class="hero">
 	<div class="home-slider owl-carousel">
 		@foreach ($sliders as $slider)
@@ -14,7 +13,6 @@
 			<div class="col-md-12 ftco-animate text-center">
 				<h1 class="">{{$slider->description1}}</h1>
 				<h2 class="subheading mb-4">{{$slider->description2}}</h2>
-				{{-- <p><a href="#" class="btn btn-primary">Details</a></p> --}}
 			</div>
 
 			</div>

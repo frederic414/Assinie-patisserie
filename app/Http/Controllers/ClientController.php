@@ -54,7 +54,7 @@ class ClientController extends Controller
     public function select_par_cat($name)
     {
         $categories = Category::get();
-        $produits = Product::where('product_category', $name)->where('status', 1)->get();
+        $produits = Product::where('product_category', $name)->where('status', 1)->paginate(1);
 
         return view('client.catalogue')->with('produits', $produits)->with('categories', $categories);
     }

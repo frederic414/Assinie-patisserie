@@ -58,12 +58,12 @@
 				@endforeach			  
 		  </div>
 		<div class="row mt-5">
-		<div class="col text-center text-danger">
-		  <div class="d-flex justify-content-center text-danger ">
-			  {{ $produits->links() }}
-		  </div>
-	  </div>
-	  </div>
+			<div class="col text-center text-danger">
+				<div class="d-flex justify-content-center text-danger ">
+					{{ $produits->links() }}
+				</div>
+			</div>
+	  	</div>
   </section>
  
 @endsection
