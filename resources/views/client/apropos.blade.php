@@ -2,8 +2,6 @@
 
 @section('contenu')
 
-    <!DOCTYPE html>
-    <html>
 
     <head>
         <meta charset="UTF-8" />
@@ -129,8 +127,5 @@
         </div>
         <script src="frontend/js/jquery.min.js"></script>
         <script src="frontend/js/parallax.min.js"></script>
-    </body>
-
-    </html>
 
 @endsection

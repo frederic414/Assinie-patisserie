@@ -1,0 +1,109 @@
+[33mcommit 64a08d73de69c3db615fdb2b8dcb864d420ea2bf[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: 7b06fb2 f48b8ab
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Thu Sep 2 16:33:24 2021 +0000
+
+    Merge branch 'main' of https://github.com/frederic414/Assinie-patisserie
+
+[33mcommit 7b06fb23a3524046b8e43b73ef9eae6a7e809e2b[m
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Thu Sep 2 16:32:50 2021 +0000
+
+    m1
+
+[33mcommit 542431c6d66352b6da896af0ac6ebc692ed4ea48[m
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Thu Sep 2 16:14:34 2021 +0000
+
+    m
+
+[33mcommit f48b8abd29d0d0186d6b60b5033a8cec96d9417c[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Ougda-chams <60268516+Ougda-chams@users.noreply.github.com>
+Date:   Wed Sep 1 12:23:48 2021 +0000
+
+    Ajout des fichiers Js, work on  page Apropos et Contactez-nous
+
+[33mcommit 312399d97ef6f7365f503965271e6cc3e6be0bd0[m
+Author: Michel1roger <michaelrogerzongo@gmail.com>
+Date:   Sun Aug 29 18:37:43 2021 +0000
+
+    suppression du fichier dessais
+
+[33mcommit ea3b304099f92e30c1eda888903399459ce926c3[m
+Author: Michel1roger <michaelrogerzongo@gmail.com>
+Date:   Sun Aug 29 18:33:08 2021 +0000
+
+    fichier essais ajouter
+
+[33mcommit ba3040494256a49dbec012d05082812066bd3c1c[m
+Author: Ougda-chams <60268516+Ougda-chams@users.noreply.github.com>
+Date:   Sat Aug 28 12:00:07 2021 +0000
+
+    suppression apropos
+
+[33mcommit a0b30ffcaf80ce44d3acb4da15c1910b3dde75e5[m
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Sat Aug 28 11:56:14 2021 +0000
+
+    supression d'un fichier php
+
+[33mcommit d8290bb2b81a2f630e550863b7fcdb293544b367[m
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Sat Aug 28 11:49:57 2021 +0000
+
+    ajou d'un fichier
+
+[33mcommit 3771d52f0c8c5f6c3fb1c4975718949212059fc7[m
+Merge: fa2b6b3 0ce3dac
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Sat Aug 28 11:48:01 2021 +0000
+
+    Merge branch 'main' of https://github.com/frederic414/Assinie-patisserie
+
+[33mcommit fa2b6b36af04e59541334b80e15c357f38a076c4[m
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Sat Aug 28 11:47:12 2021 +0000
+
+    ajout de code
+
+[33mcommit 0ce3dacab58e6043f31de697b59ea962cdb2ba7c[m
+Author: Ougda-chams <60268516+Ougda-chams@users.noreply.github.com>
+Date:   Sat Aug 28 11:43:45 2021 +0000
+
+    mon 1er commit
+
+[33mcommit ff03a3681af3dfd870f6892dbbd20f5cb4fceeca[m
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Mon Aug 16 22:08:40 2021 +0000
+
+    Ajout recommandation de produit
+
+[33mcommit ddbf380247d07f3f787cdf5fe1134d69891c7b5e[m
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Sat Aug 14 14:29:26 2021 +0000
+
+    optimisation des routes
+
+[33mcommit 405f34a377229c8de42ef4c67ea8ce0bf298973f[m
+Author: frederic414 <=frederic007>
+Date:   Fri Aug 13 17:38:08 2021 +0000
+
+    middleware et authentification
+
+[33mcommit fe8370f1bbd37a1e1a16ff8ad9d04dcdadeb7215[m
+Author: frederic414 <=frederic007>
+Date:   Wed Aug 11 18:42:03 2021 +0000
+
+    commande, et facture ok
+
+[33mcommit 99e6508ea1112f08460cf5a9e06cec6ce2e9d00f[m
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Mon Jun 14 15:54:09 2021 +0000
+
+    Ajout d'un commentaire pour les routes
+
+[33mcommit a5afc1c32fab27d3dded75c6215e196e9a8698eb[m
+Author: frederic414 <=freddipama@gmail.com>
+Date:   Mon May 3 14:30:08 2021 +0000
+
+    commit initial assinie-patisserie
