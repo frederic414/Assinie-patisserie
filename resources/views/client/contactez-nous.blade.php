@@ -1,7 +1,5 @@
 @extends('layouts.app1')
 @section('contenu')
-    <!DOCTYPE html>
-    <html>
 
     <head>
         <meta charset="UTF-8" />
@@ -9,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="description"
             content=" ASSINIE Pâtisserie, la pâtisserie en ligne qui vous permet de passer toutes vos
-                                                                         commande patissier gâteaux de mariage, gâteaux d'anniverssaire et gâteaux de baptème et vous les faits livrer à domicil.">
+                                                                             commande patissier gâteaux de mariage, gâteaux d'anniverssaire et gâteaux de baptème et vous les faits livrer à domicil.">
         <meta name="keywords"
             content="ASSINIE, pâtisserie,assinie pâtisserie, gâteaux d'anniverssaire, gâteaux de mariage, gâteaux de baptème,partissier">
         <title>Assinie Pâtisserie - Contact Page</title>
@@ -95,10 +93,10 @@
         </div>
 
         <!-- How to change your own map point
-                                                1. Go to Google Maps
-                                                2. Click on your location point
-                                                3. Click "Share" and choose "Embed map" tab
-                                                4. Copy only URL and paste it within the src="" field below -->
+                                                    1. Go to Google Maps
+                                                    2. Click on your location point
+                                                    3. Click "Share" and choose "Embed map" tab
+                                                    4. Copy only URL and paste it within the src="" field below -->
         <div class="tm-container-inner-2 tm-map-section">
             <div class="row">
                 <div class="col-12">
@@ -168,7 +166,5 @@
                 }
             });
         </script>
-    </body>
 
-    </html>
-@endsection
+    @endsection
