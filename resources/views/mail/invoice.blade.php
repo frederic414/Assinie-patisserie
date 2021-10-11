@@ -115,8 +115,8 @@
                                 </td>
                                 
                                 <td>
-                                    Invoice #: {{$commande->payer_id}}<br>
-                                    Created: {{$commande->created_at}}
+                                    ID #: {{$commande->payer_id}}<br>
+                                    Creer le: {{$commande->created_at}}
                                 </td>
                             </tr>
                         </table>                       

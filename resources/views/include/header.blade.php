@@ -37,7 +37,7 @@
 		    		<div class="row d-flex">
 		    			<div class="col-md-6 pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-						    <span class="text">+226 54959585 / 53013333</span>
+						    <span class="text"> <a href="tel:+226 54959585">+226 54959585</a> /  <a href="tel:+226 53013333">+226 53013333</a> </span>
 					    </div>
 					    <div class="col-md-6 pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
@@ -63,7 +63,7 @@
 	          <li class="nav-item cta cta-colored"><a href="{{URL::to('/panier')}}" class="nav-link"><span class="icon-shopping_cart"></span>[{{Session::has('cart')?Session::get('cart')->totalQty:0}}]</a></li>
 
 			  @if (Session::has('client'))
-			  	<li class="nav-item"><a href="{{URL::to('/client-logout')}}" class="nav-link"><span class="fa 	fa-user"></span>Deconnexion</a></li>	  
+			  	<li class="nav-item"><a href="{{URL::to('/client-logout')}}" class="nav-link"><span class="fa fa-user"></span>Deconnexion</a></li>	  
 			  @else
 				<li class="nav-item"><a href="{{URL::to('/client-login')}}" class="nav-link"><span class="fa fa-user"></span>Connexion</a></li>
 
@@ -73,5 +73,5 @@
 	        </ul>
 	      </div>
 	    </div>
-	  </nav>
+	</nav>
     <!-- END nav -->

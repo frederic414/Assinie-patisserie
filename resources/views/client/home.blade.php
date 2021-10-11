@@ -163,11 +163,11 @@
 		@endforeach		 
 	  </div>
   </div>
-</section>
+{{-- </section>
   
   <section class="ftco-section img" style="background-image: url(frontend/images/img12.jpg);">
   <div class="container">
-		  <div class="row justify-content-end">
+	<div class="row justify-content-end">
 	<div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
 		<span class="subheading">Promotion</span>
 	  <h2 class="mb-4">Deal du weekend</h2>
@@ -179,11 +179,11 @@
 					<div class="time pl-3" id="hours"></div>
 					<div class="time pl-3" id="minutes"></div>
 					<div class="time pl-3" id="seconds"></div>
-				  </div>
+		</div>
 	</div>
   </div>   		
   </div>
-</section>
+</section> --}}
 
 <section class="ftco-section testimony-section">
 <div class="container">
