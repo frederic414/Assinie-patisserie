@@ -67,10 +67,12 @@
                     <li class="nav-item active"><a href="{{ URL::to('/') }}" class="nav-link">Acceuil</a></li>
                     <li class="nav-item"><a href="{{ URL::to('/catalogue') }}"
                             class="nav-link">Catalogue</a></li>
-                    <li class="nav-item cta cta-colored"><a href="{{ URL::to('/panier') }}"
+                    @if (Session::has('cart'))
+                        <li class="nav-item cta cta-colored"><a href="{{ URL::to('/panier') }}"
                             class="nav-link"><span
                                 class="icon-shopping_cart"></span>[{{ Session::has('cart') ? Session::get('cart')->totalQty : 0 }}]</a>
-                    </li>
+                        </li>
+                    @endif
 
                     @if (Session::has('client'))
                         <li class="nav-item"><a href="{{ URL::to('/client-logout') }}"

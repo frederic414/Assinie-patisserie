@@ -22,7 +22,8 @@
                         <th>Adresse</th>
                         <th>telephone</th>
                         <th>Date livraison</th>
-                        <th>Panier</th>  
+                        <th>Panier</th>
+                        <th>Status</th>   
                         <th>Actions</th>
                     </tr>
                   </thead>
@@ -37,13 +38,26 @@
                         <td>{{$commande->telephone}}</td>
                         <td>{{$commande->date}}</td>
                         <td>
-                          @foreach ($commande->panier->items as $item)
+        
+                          @foreach ((array)$commande->panier->items as $item)
                               {{$item['product_name']. ' , '}}
                           @endforeach
                         </td>
+                        <td>
+                          @if ($commande->statut_commande==0)
+                            <label class="badge badge-danger">Pas OK</label>
+                          @else
+                            <label class="badge badge-success">OK</label>
+                          @endif 
+                        </td>
                         
                         <td>
-                          <a href="{{url('/admin/commande_pdf/'.$commande->id)}}"><button class="btn btn-outline-primary">View</button></a>
+                          <a href="{{url('/admin/commande_pdf/'.$commande->id)}}"><button class="btn btn-outline-primary">Détail</button></a>
+                          @if ($commande->statut_commande==0)
+                            <button class="btn btn-outline-success" onclick="window.location = '{{url('/admin/commande_traiter/'.$commande->id)}}'">Traité</button>
+                          @else
+                              <button class="btn btn-outline-danger" onclick="window.location = '{{url('/admin/commande_non_traiter/'.$commande->id)}}'">Non traité</button>
+                          @endif
                         </td>
                       </tr>
                       {!!Form::hidden('', $increment++)!!}

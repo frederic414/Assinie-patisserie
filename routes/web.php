@@ -71,6 +71,8 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/commandes', [AdminController::class, 'commande']);
         Route::get('/commande_pdf/{id}', [PdfController::class, 'voir_pdf']);
+        Route::get('/commande_traiter/{id}', [AdminController::class, 'commande_traiter']);
+        Route::get('/commande_non_traiter/{id}', [AdminController::class, 'commande_non_traiter']);
     });
 });
 

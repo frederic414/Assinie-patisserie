@@ -176,6 +176,7 @@ class ClientController extends Controller
         $commande->date = $request->input('date');
         $commande->panier = serialize($cart);
         $commande->payer_id = $payement_id;
+        $commande->statut_commande =0;
 
         $commande->save();
 
@@ -190,8 +191,8 @@ class ClientController extends Controller
             return $commande;
         });
 
-        $email = Session::get('client')->email;
-        Mail::to($email)->send(new SendMail($commandes));
+        // $email = Session::get('client')->email;
+        // Mail::to($email)->send(new SendMail($commandes));
 
         return redirect('/panier')->with('status', 'Votre commande a été effectuée avec succès');
 
