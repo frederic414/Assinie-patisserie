@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Client;
 use App\Models\Commande;
+use App\Models\Commentaire;
 use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\Cart;
@@ -93,8 +94,9 @@ class ClientController extends Controller
 
     public function produit($id)
     {
+        $commentaire = Commentaire::where('approuve',"1")->take(2);
         $produit = Product::where('status', 1)->find($id);
-        return view('client.produit',['produit' => $produit]);
+        return view('client.produit')->with('produit', $produit)->with('commentaire', $commentaire);
     }
 
     public function checkout()
@@ -207,4 +209,36 @@ class ClientController extends Controller
     {
         return view('client.contactez-nous');
     }
+
+    // fonction pour permettre aux clients de commenter
+public function commenter(Request $request)
+{
+    $this->validate($request, [
+        'commentaire' => 'required:commentaires',
+        'nom' => 'required:commentaires',
+        'prenom' => 'required:commentaires' 
+        
+    ]);
+    $commentaire = new Commentaire();
+    $client = Client::find(1);
+    $produit = Product::find(1);
+    $commentaire->commentaire = $request->input(('commentaire'));
+    $commentaire->commenter_id = $client->id;
+    $commentaire->email_client = $client->email;
+    $commentaire->product_id = $produit->id;
+    $commentaire->nom_produit = $produit->product_name;
+    $nom_client = $request->input(('nom'));
+    $prenom_client = $request->input(('prenom'));
+    $identite_client = $nom_client." ".$prenom_client;
+    $commentaire->nomclient = $identite_client; 
+    $commentaire->save();
+    return back()->with('status', 'Votre avis a été enrégistré! Merci pour la confiance');
 }
+
+
+
+
+
+
+}
+

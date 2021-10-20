@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
+@extends('layouts.app1')
+
+@section('contenu')
 <head>
 	<title>Login</title>
 	<meta charset="UTF-8">
@@ -30,7 +31,7 @@
 <body>
 	
 	<div class="limiter">
-		 <div class="container-login100" style="background-image: url('frontend/images/bg-01.jpg');">
+		 <div class="container-login100" style="">
 			<div class="wrap-login100">
 				<form action="{{url('/creer_compte')}}" method="POST" class="login100-form validate-form">
 					{{ csrf_field() }}
@@ -59,27 +60,36 @@
 							{{Session::get('status')}}
 						</div>						
 					@endif
-
-					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="email" placeholder="Username">
+					<div class="wrap-input100 validate-input" data-validate = "Entrer votre nom">
+						<input class="input100" type="text" name="nom" placeholder="Nom">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Entrer votre prénom">
+						<input class="input100" type="text" name="prenom" placeholder="Prenom">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Entrer votre prénom">
+						<input class="input100" type="text" name="nomutilisateur" placeholder="Nom d'utilisateur">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Entrer votre contact">
+						<input class="input100" type="text" name="contact" placeholder="Contact">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>	
+					<div class="wrap-input100 validate-input" data-validate = "Entrer votre E-mail">
+						<input class="input100" type="text" name="email" placeholder="E-mail">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="password" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Mot de passe">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
-					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
-							Se souvenir de moi
-						</label>
-					</div>
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							connexion
+							S'inscrire
 						</button>
 					</div>
 
@@ -112,6 +122,4 @@
 	<script src="frontend/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="frontend/js/main1.js"></script>
-
-</body>
-</html>
+@endsection

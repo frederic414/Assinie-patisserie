@@ -38,6 +38,7 @@ Route::get('/retirer-produit/{name}', [ClientController::class, 'retirer_produit
 Route::post('/creer_compte', [ClientController::class, 'creer_compte']);
 Route::post('/acceder_compte', [ClientController::class, 'acceder_compte']);
 Route::post('/confirmation', [ClientController::class, 'confirmation']);
+Route::post('/commenter', [ClientController::class, 'commenter']);
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin', [AdminController::class, 'dashboard']);
@@ -73,6 +74,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/commande_pdf/{id}', [PdfController::class, 'voir_pdf']);
         Route::get('/commande_traiter/{id}', [AdminController::class, 'commande_traiter']);
         Route::get('/commande_non_traiter/{id}', [AdminController::class, 'commande_non_traiter']);
+        Route::get('/commentaires', [AdminController::class, 'commentaires']);
+        Route::get('/supprimer_commentaire/{id}', [AdminController::class, 'supprimer_commentaire']);
+        Route::get('poster_commentaire/{id}', [AdminController::class, 'poster_commentaire']);
+        Route::get('desactiver_commentaire/{id}', [AdminController::class, 'desactiver_commentaire']);
     });
 });
 

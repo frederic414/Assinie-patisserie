@@ -35,6 +35,7 @@
                 <li class="nav-item"> <a class="nav-link" href="{{URL::to('/admin/slider')}}">Slider</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{URL::to('/admin/commandes')}}">Commandes</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{URL::to('/admin/clients')}}">Clients</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{URL::to('/admin/commentaires')}}">Commentaires</a></li>
               </ul>
             </div>
           </li>
